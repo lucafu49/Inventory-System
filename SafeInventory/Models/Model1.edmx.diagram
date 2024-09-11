@@ -8,7 +8,7 @@
         <EntityTypeShape EntityType="SafeInventoryModel.Category" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SafeInventoryModel.Product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="SafeInventoryModel.ProductXSupplier" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SafeInventoryModel.Supplier" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SafeInventoryModel.Supplier" Width="1.5" PointX="4" PointY="4.25" IsExpanded="true" />
         <AssociationConnector Association="SafeInventoryModel.FK_Product_Category" ManuallyRouted="false" />
         <AssociationConnector Association="SafeInventoryModel.FK_ProductXSupplier_Product" ManuallyRouted="false" />
         <AssociationConnector Association="SafeInventoryModel.FK_ProductXSupplier_Supplier" ManuallyRouted="false" />

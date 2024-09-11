@@ -27,19 +27,106 @@ namespace SafeInventory.Services
             }
         }
 
+        public List<dynamic> GetAllCategoriesGridView() 
+        {
+            var categories = db.Category.Select(p => new 
+                {
+                    p.IDCategory,
+                    p.Name
+                }).ToList<dynamic>();
+
+            return categories;
+        }
+
         public int? GetCategoryIdByName(string categoryName)
         {
             try
             {
-                // Buscar la categoría por nombre y retornar el ID si existe
                 var category = db.Category.FirstOrDefault(c => c.Name == categoryName);
                 return category?.IDCategory;
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error al obtener la categoría: " + ex.Message);
-                return null; // Usar null si no se encuentra la categoría
+                return null;
             }
         }
+
+        public Category createCategory(string name)
+        {
+            Category category = new Category()
+            {
+                Name = name
+            };
+            return category;
+        }
+
+        //INSERT
+        public void addCategory(Category category)
+        {
+            try
+            {
+                db.Category.Add(category);
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al agregar la categoria: " + ex.Message);
+            }
+        }
+
+        //DELETE
+        public bool removeCategory(int IDCategory) 
+        {
+            try
+            {
+                var category = db.Category.Find(IDCategory);
+
+                if (category != null)
+                {
+                    db.Category.Remove(category);
+                    db.SaveChanges();
+                    return true;
+                }
+                else
+                {
+                    Console.WriteLine("Producto no encontrado.");
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al eliminar el producto: " + ex.Message);
+                return false;
+            }
+        }
+
+        //UPDATE
+        public bool updateCategory(Category category)
+        {
+            try
+            {
+                var existingCat = db.Category.Find(category.IDCategory);
+
+                // Si no se encuentra la categoría, devolver false
+                if (existingCat == null)
+                {
+                    Console.WriteLine("Categoria no encontrada.");
+                    return false;
+                }
+
+                // Actualizamos los campos de la categoría
+                existingCat.Name = category.Name;
+
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al actualizar la categoria: " + ex.Message);
+                return false;
+            }
+        }
+
     }
 }
