@@ -1,4 +1,5 @@
-﻿using SafeInventory.Models;
+﻿using SafeInventory.Forms;
+using SafeInventory.Models;
 using SafeInventory.Services;
 using System;
 using System.Collections.Generic;
@@ -17,14 +18,12 @@ namespace SafeInventory
         public Form1()
         {
             InitializeComponent();
+        }
 
-            ProductServices ps = new ProductServices();
-            List<Product> products = new List<Product>();
-            products = ps.GetProducts();
-            foreach (Product p in products)
-            {
-                MessageBox.Show(p.Name);
-            }
+        private void btn_products_Click(object sender, EventArgs e)
+        {
+            GridProducts g = new GridProducts();
+            g.Show();
         }
     }
 }
