@@ -137,5 +137,17 @@ namespace SafeInventory.Forms
         }
 
         }
+
+        private void getProductsXSupplier()
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al buscar proveedores del producto: " + ex.Message);
+            }
+        }
     }
 }

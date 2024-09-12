@@ -90,13 +90,13 @@ namespace SafeInventory.Services
                 }
                 else
                 {
-                    Console.WriteLine("Producto no encontrado.");
+                    Console.WriteLine("Categoria no encontrado.");
                     return false;
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al eliminar el producto: " + ex.Message);
+                Console.WriteLine("Error al eliminar la Categoria: " + ex.Message);
                 return false;
             }
         }
@@ -108,14 +108,12 @@ namespace SafeInventory.Services
             {
                 var existingCat = db.Category.Find(category.IDCategory);
 
-                // Si no se encuentra la categoría, devolver false
                 if (existingCat == null)
                 {
                     Console.WriteLine("Categoria no encontrada.");
                     return false;
                 }
 
-                // Actualizamos los campos de la categoría
                 existingCat.Name = category.Name;
 
                 db.SaveChanges();

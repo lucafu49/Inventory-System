@@ -31,5 +31,11 @@ namespace SafeInventory
             GridCategories g = new GridCategories();
             g.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            GridSupplier g = new GridSupplier();
+            g.Show();
+        }
     }
 }

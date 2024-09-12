@@ -47,6 +47,8 @@ namespace SafeInventory.Services
             }
         }
 
+
+
         //DELETE/
         public bool deleteProduct(int idProduct)
         {

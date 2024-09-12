@@ -51,6 +51,7 @@
             this.txt_from = new System.Windows.Forms.TextBox();
             this.txt_to = new System.Windows.Forms.TextBox();
             this.lbl_to = new System.Windows.Forms.Label();
+            this.lb_supplier = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dv_product)).BeginInit();
             this.SuspendLayout();
             // 
@@ -146,7 +147,7 @@
             // 
             // btn_create
             // 
-            this.btn_create.Location = new System.Drawing.Point(607, 243);
+            this.btn_create.Location = new System.Drawing.Point(607, 199);
             this.btn_create.Name = "btn_create";
             this.btn_create.Size = new System.Drawing.Size(239, 39);
             this.btn_create.TabIndex = 11;
@@ -156,7 +157,7 @@
             // 
             // btn_update
             // 
-            this.btn_update.Location = new System.Drawing.Point(607, 307);
+            this.btn_update.Location = new System.Drawing.Point(607, 263);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(239, 39);
             this.btn_update.TabIndex = 12;
@@ -166,7 +167,7 @@
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(607, 368);
+            this.btn_delete.Location = new System.Drawing.Point(607, 324);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(239, 39);
             this.btn_delete.TabIndex = 13;
@@ -254,11 +255,20 @@
             this.lbl_to.TabIndex = 21;
             this.lbl_to.Text = "Hasta:";
             // 
+            // lb_supplier
+            // 
+            this.lb_supplier.FormattingEnabled = true;
+            this.lb_supplier.Location = new System.Drawing.Point(607, 395);
+            this.lb_supplier.Name = "lb_supplier";
+            this.lb_supplier.Size = new System.Drawing.Size(239, 212);
+            this.lb_supplier.TabIndex = 23;
+            // 
             // GridProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(858, 499);
+            this.ClientSize = new System.Drawing.Size(858, 622);
+            this.Controls.Add(this.lb_supplier);
             this.Controls.Add(this.txt_to);
             this.Controls.Add(this.lbl_to);
             this.Controls.Add(this.txt_from);
@@ -316,5 +326,6 @@
         private System.Windows.Forms.TextBox txt_from;
         private System.Windows.Forms.TextBox txt_to;
         private System.Windows.Forms.Label lbl_to;
+        private System.Windows.Forms.ListBox lb_supplier;
     }
 }

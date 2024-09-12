@@ -39,6 +39,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btn_register = new System.Windows.Forms.Button();
             this.btn_close = new System.Windows.Forms.Button();
+            this.chb_suppliers = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -135,11 +136,20 @@
             this.btn_close.UseVisualStyleBackColor = true;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
+            // chb_suppliers
+            // 
+            this.chb_suppliers.FormattingEnabled = true;
+            this.chb_suppliers.Location = new System.Drawing.Point(344, 61);
+            this.chb_suppliers.Name = "chb_suppliers";
+            this.chb_suppliers.Size = new System.Drawing.Size(120, 94);
+            this.chb_suppliers.TabIndex = 11;
+            // 
             // RegisterProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 227);
+            this.ClientSize = new System.Drawing.Size(543, 227);
+            this.Controls.Add(this.chb_suppliers);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.btn_register);
             this.Controls.Add(this.txt_stock);
@@ -173,5 +183,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn_register;
         private System.Windows.Forms.Button btn_close;
+        private System.Windows.Forms.CheckedListBox chb_suppliers;
     }
 }
