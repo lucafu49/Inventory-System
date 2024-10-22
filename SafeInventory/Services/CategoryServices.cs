@@ -60,8 +60,6 @@ namespace SafeInventory.Services
             };
             return category;
         }
-
-        //INSERT
         public void addCategory(Category category)
         {
             try
